@@ -1,0 +1,13 @@
+name: Basic Build Action
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: npm install
+      run: |
+        npm install
+    - name: build docker image
+      run: docker build -t basic-node-app .
