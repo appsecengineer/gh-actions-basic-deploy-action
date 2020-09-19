@@ -11,3 +11,8 @@ jobs:
         npm install
     - name: build docker image
       run: docker build -t basic-node-app .
+    - name: push to package registry
+      uses: mattdavis0351/actions/docker-gpr@v1
+      with: 
+        repo-token: ${{ secrets.GH_TOKEN }}
+        image-name: basic-node-app
