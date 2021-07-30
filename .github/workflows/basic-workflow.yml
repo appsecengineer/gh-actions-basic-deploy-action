@@ -14,5 +14,5 @@ jobs:
     - name: push to package registry
       uses: mattdavis0351/actions/docker-gpr@v1
       with: 
-        repo-token: ${{ secrets.GH_TOKEN }}
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
         image-name: basic-node-app
